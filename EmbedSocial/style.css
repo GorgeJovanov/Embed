@@ -1,0 +1,133 @@
+
+.cardHolder {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+
+    
+}
+
+.cardHolder .card {
+    flex: 1 0 75%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card {
+    position: relative;
+    min-width: 280px;
+    max-width: 360px;
+    min-height: 400px;
+    background: #fff;
+    box-shadow: 15px 15px 60px rgba(0, 0, 0,0.15);
+    padding: 20px;
+    border-color: #3f3f3f;
+    border-radius: 1rem;
+
+}
+
+.card .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .top .user {
+    display: flex;
+    align-items: center;
+}
+.card .top .user .profileImg {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 8px;
+}
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .top .user h3 {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #4d4d4f;
+    font-weight: bolder;
+    line-height: 1em;
+    margin-left: 8px;
+}
+
+.imgBx {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    margin: 10px 0 15px;
+}
+.caption {
+    font-size: smaller;
+    margin-left: 15px;
+    font-family: sans-serif;
+    color: #3f3f3f;
+}
+
+.likes {
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    font-family: sans-serif;
+
+}
+.likes img {
+    margin-left: 5px;
+}
+.likes span {
+    margin-left: 10px;
+}
+
+.btn {
+    background-color: #008CBA; 
+    border: none;
+    color: #fff;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5%;
+  }
+  .loadMore {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+  @media screen and (max-width: 768px) {
+    .cardHolder {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .cardHolder {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+  }
